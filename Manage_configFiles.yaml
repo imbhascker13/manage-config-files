@@ -18,18 +18,6 @@
       shell: /usr/sbin/a2dissite 000-default.conf
       when: disable_default
       notify: Reload Apache
-      
-    - name: "UFW - Allow HTTP on port {{ http_port }}"
-      ufw:
-        rule: allow
-        port: "{{ http_port }}"
-        proto: tcp
-
-    - name: "UFW - Allow HTTP on port {{ http_port1 }}"
-      ufw:
-        rule: allow
-        port: "{{ http_port1 }}"
-        proto: tcp
 
   handlers:
     - name: Reload Apache
