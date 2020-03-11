@@ -1,3 +1,10 @@
+---
+- hosts: all
+  become: true
+  vars_files:
+    - vars/default.yml
+
+  tasks:
     - name: Set up Apache virtualhost
       template:
         src: "files/apache.conf.j2"
