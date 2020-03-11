@@ -1,32 +1,27 @@
-NameVirtualHost *:90
+<VirtualHost *:{{ http_port1 }}>
 
-<VirtualHost *:90>
      ServerAdmin webmaster@localhost
-        DocumentRoot /var/www/nodejs-hello-world
-        PassengerAppRoot /var/www/nodejs-hello-world
+        DocumentRoot /var/www/{{ http_host1 }}
+        PassengerAppRoot /var/www/{{ http_host1 }}
 
          PassengerAppType node
-         PassengerStartupFile index.js
+         PassengerStartupFile server.js
 </VirtualHost>
 
-
- NameVirtualHost *:91
-
-<VirtualHost *:91>
+<VirtualHost *:{{ http_port1 }}>
      ServerAdmin webmaster@localhost
-        DocumentRoot /var/www/nodejs-hello-world
-        PassengerAppRoot  /var/www/nodejs-hello-world
+        DocumentRoot /var/www/{{ http_host2 }}
+        PassengerAppRoot  /var/www/{{ http_host2 }}
 
          PassengerAppType node
-         PassengerStartupFile index.js
+         PassengerStartupFile server.js
 </VirtualHost>
-NameVirtualHost *:92
 
-<VirtualHost *:92>
+<VirtualHost *:{{ http_port1 }}>
      ServerAdmin webmaster@localhost
-        DocumentRoot /var/www/nodejs-hello-world
-        PassengerAppRoot  /var/www/nodejs-hello-world
+        DocumentRoot /var/www/{{ http_host3 }}
+        PassengerAppRoot  /var/www/{{ http_host3 }}
 
          PassengerAppType node
-         PassengerStartupFile index.js
+         PassengerStartupFile server.js
 </VirtualHost> 
