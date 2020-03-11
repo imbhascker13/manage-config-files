@@ -7,7 +7,7 @@
   tasks:
     - name: Set up Apache virtualhost
       template:
-        src: "files/apache.conf.j2"
+        src: "config_files/apache.conf.j2"
         dest: "/etc/apache2/sites-available/{{ http_conf }}"
     
     - name: Enable new site
