@@ -8,7 +8,7 @@
          PassengerStartupFile server.js
 </VirtualHost>
 
-<VirtualHost *:{{ http_port1 }}>
+<VirtualHost *:{{ http_port2 }}>
      ServerAdmin webmaster@localhost
         DocumentRoot /var/www/{{ http_host2 }}
         PassengerAppRoot  /var/www/{{ http_host2 }}
@@ -17,7 +17,7 @@
          PassengerStartupFile server.js
 </VirtualHost>
 
-<VirtualHost *:{{ http_port1 }}>
+<VirtualHost *:{{ http_port3 }}>
      ServerAdmin webmaster@localhost
         DocumentRoot /var/www/{{ http_host3 }}
         PassengerAppRoot  /var/www/{{ http_host3 }}
