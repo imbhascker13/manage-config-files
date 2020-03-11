@@ -9,6 +9,11 @@
       template:
         src: "config_files/apache.conf.j2"
         dest: "/etc/apache2/sites-available/{{ http_conf }}"
+        
+    - name: Set up Apache virtualhost ports
+      template:
+        src: "config_files/ports.conf.j2"
+        dest: "/etc/apache2/ports.conf"      
     
     - name: Enable new site
       shell: /usr/sbin/a2ensite {{ http_conf }}
