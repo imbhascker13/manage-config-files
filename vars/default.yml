@@ -1,8 +1,8 @@
 ---
 app_user: "ubuntu"
 http_host1: "feature_1"
-http_host2: "feature_1"
-http_host3: "feature_1"
+http_host2: "feature_2"
+http_host3: "feature_3"
 http_conf: "nodejs_app.conf"
 http_port: "90"
 http_port1: "91"
