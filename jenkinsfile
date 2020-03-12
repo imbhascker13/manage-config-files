@@ -4,6 +4,6 @@ node {
   git 'https://github.com/kalyankkc/Manage-configFiles.git'
   }
   stage('ansible deploy'){
-  sh label: 'ansible', script: 'ansible-playbook playbook.yml'
+  sh label: 'ansible', script: 'ansible-playbook Manage_configFiles.yaml'
 }
 }
