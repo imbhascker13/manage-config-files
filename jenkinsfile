@@ -1,9 +1,9 @@
 node {
 
   stage('Git-Checkout') {
-  git 'https://github.com/kalyankkc/Manage-configFiles.git'
+  git 'https://github.com/imbhascker13/manage-config-files.git'
   }
   stage('ansible deploy'){
-  sh label: 'ansible', script: 'ansible-playbook -i inventory -u Shyam Manage_configFiles.yaml'
+  sh label: 'ansible', script: 'ansible-playbook Manage_configFiles.yaml'
 }
 }
